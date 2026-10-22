@@ -1,0 +1,114 @@
+.timeline-scroll {
+  height: 646px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #dfe6e1 transparent;
+  overflow-anchor: none;
+}
+.timeline-day {
+  display: flex;
+  align-items: center;
+  padding: 0 19px;
+  background: #fff;
+  z-index: 1;
+}
+.timeline-day h3 {
+  font-size: 9px;
+  color: #777f89;
+  font-weight: 500;
+}
+.timeline-item {
+  padding-left: 34px;
+  padding-right: 12px;
+}
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e6ece8;
+}
+.timeline-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #a9c6b4;
+  background: white;
+  border-radius: 50%;
+  top: 16px;
+  left: 19px;
+}
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  border: 0;
+  border-radius: 4px;
+  padding: 9px 7px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  background: white;
+  overflow: hidden;
+}
+.timeline-event:hover,
+.timeline-event:focus-visible {
+  background: #f5f9f6;
+}
+.timeline-event:focus-visible {
+  outline-offset: -2px;
+}
+.timeline-time {
+  font-size: 8px;
+  color: #99a0a9;
+}
+.timeline-event strong {
+  font-size: 10px;
+  font-weight: 550;
+  color: #505964;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.timeline-detail {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8px;
+  color: #979fa8;
+}
+.timeline-empty {
+  height: 646px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  text-align: center;
+  color: #8c9990;
+}
+.timeline-empty h3 {
+  font-size: 14px;
+  color: #68776d;
+}
+.timeline-empty p {
+  font-size: 11px;
+}
+@media (min-width: 1550px) {
+  .timeline-event strong {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1200px) {
+  .timeline-scroll {
+    height: 688px;
+  }
+}
